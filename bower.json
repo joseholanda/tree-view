@@ -1,0 +1,18 @@
+{
+  "name": "tree-view",
+  "description": "nao esqueça de escrever a descricao",
+  "main": "tree-view.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "iron-icon": "polymerelements/iron-icon#^1.0.0",
+    "paper-menu": "PolymerElements/paper-menu#^1.2.2",
+    "paper-item": "PolymerElements/paper-item#^1.2.1",
+    "iron-icons": "PolymerElements/iron-icons#^1.1.3"
+  }
+}

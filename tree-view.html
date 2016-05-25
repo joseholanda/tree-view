@@ -1,0 +1,59 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="../paper-menu/paper-menu.html">
+<link rel="import" href="../paper-menu/paper-submenu.html">
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+
+<link rel="import" href="tree-view-item.html">
+
+<!--
+An element displaying a file tree.
+
+#Example:
+
+    <tree-view data="{{data}}"></tree-view>
+    ...
+    document.querySelector('tree-view').data =
+    [{
+        "name": "Pai A"
+    }, {
+        "name": "Pai B"
+    }, {
+        "name": "Pai C"
+    }];
+
+@demo
+-->
+<dom-module id="tree-view">
+    <template>
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+
+        <paper-menu attr-for-item-title="label">
+            <template is="dom-repeat" items="{{data}}">
+                <tree-view-item id="raiz" data="{{item}}"></tree-view-item>
+            </template>
+        </paper-menu>
+
+    </template>
+    <script>
+        Polymer({
+            is: 'tree-view',
+            properties: {
+                /**
+                 * `data` são os dados usados para renderizar a árvore.
+                 */
+                data: {
+                    type: Array,
+                    value: []
+                }
+
+            }
+        });
+    </script>
+</dom-module>
